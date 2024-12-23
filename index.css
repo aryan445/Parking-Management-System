@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-sm rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:bg-white/95;
+  }
+  
+  .btn {
+    @apply px-6 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 shadow-md;
+  }
+  
+  .btn-primary {
+    @apply btn bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-500;
+  }
+  
+  .btn-success {
+    @apply btn bg-green-500 text-white hover:bg-green-600 focus:ring-green-500;
+  }
+  
+  .btn-danger {
+    @apply btn bg-red-500 text-white hover:bg-red-600 focus:ring-red-500;
+  }
+
+  .input-field {
+    @apply w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300;
+  }
+
+  .status-badge {
+    @apply px-3 py-1 rounded-full text-sm font-medium inline-flex items-center gap-1;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
